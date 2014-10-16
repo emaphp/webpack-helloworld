@@ -1,0 +1,35 @@
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+
+body {
+	background-image: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		color-stop(0, #622E6B),
+		color-stop(1, #D82CDE)
+	);
+	background-image: -o-linear-gradient(bottom, #622E6B 0%, #D82CDE 100%);
+	background-image: -moz-linear-gradient(bottom, #622E6B 0%, #D82CDE 100%);
+	background-image: -webkit-linear-gradient(bottom, #622E6B 0%, #D82CDE 100%);
+	background-image: -ms-linear-gradient(bottom, #622E6B 0%, #D82CDE 100%);
+	background-image: linear-gradient(to bottom, #622E6B 0%, #D82CDE 100%);
+	height: 100%;
+	margin: 0;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+#mainRegion {
+	color: #fefefe;
+	text-align: center;
+}
+
+h1 {
+	font-weight: normal;
+	font-size: 10em;
+	font-family: "Lobster", sans-serif;
+}
+
+.main-action {
+	text-align: center;
+}

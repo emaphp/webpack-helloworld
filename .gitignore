@@ -1,3 +1,10 @@
+node_modules/
+bundle.js
+*.ttf
+*.eot
+*.woff
+*.svg
+
 # Logs
 logs
 *.log
