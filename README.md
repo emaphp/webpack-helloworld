@@ -26,6 +26,14 @@ Install required dependencies through npm:
 $ npm install
 ```
 
+Run webpack (configuration is obtained from *webpack.config.js*):
+
+```bash
+$ webpack
+```
+
+The file *bundle.js* containing all application code is generated. Open *index.html* with a browser to see the results.
+
 <br/>
 ####License
 
