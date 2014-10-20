@@ -11,6 +11,15 @@ var GreetingView = Marionette.ItemView.extend({
 	}
 });
 
+var AboutView = Marionette.ItemView.extend({
+	model: models.About,
+	tagName: 'div',
+	template: function(model) {
+		return require('../templates/about.hbs')(model);
+	}
+});
+
 module.exports = {
-	GreetingView: GreetingView
+	GreetingView: GreetingView,
+	AboutView: AboutView
 };

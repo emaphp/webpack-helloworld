@@ -24,10 +24,23 @@ body {
 	text-align: center;
 }
 
+#mainRegion a {
+	color: #fefefe;
+}
+
 h1 {
-	font-weight: normal;
 	font-size: 10em;
+	margin-bottom: 0;
+}
+
+h1, small {
+	font-weight: normal;
 	font-family: "Lobster", sans-serif;
+	
+}
+
+#buttons {
+	margin-top: 2em;
 }
 
 .main-action {

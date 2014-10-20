@@ -9,32 +9,30 @@ require('../css/styles.css');
 //font awesome
 require("font-awesome-webpack");
 
+//handlebars helpers
+require('./helpers.js');
+
 //generate application instance
 var Marionette = require('marionette');
 var app = new Marionette.Application();
 app.addRegions({mainRegion: '#mainRegion'});
 app.on("start", function() {
-	//solve dependencies
-	var _ = require('underscore');
-	var models = require("./models.js");
-	var views = require("./views.js");
-	
-	//build message
-	var values = ['Hello', 'World'];
-	var greeting = new models.Greeting({message: _.reduce(values, function (v1, v2) {
-		return v1 + ' ' + v2;
-	})});
-	
-	//show message
-	var view = new views.GreetingView({model: greeting});
-	this.mainRegion.show(view);
+	var controller = require('./controller.js');
+	controller.setRegion(this.mainRegion);
 });
 
 //initialize
 var $ = require('jquery');
 
 $(document).on('ready', function() {
-	$('#action-button').click(function() {
-		app.start();
+	app.start();
+	var controller = require('./controller.js');
+	
+	$('#hello-action').click(function() {
+		controller.displayHelloWorld();
+	});
+	
+	$('#about-action').click(function() {
+		controller.displayAbout();
 	});
 });
