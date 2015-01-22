@@ -1,6 +1,6 @@
 {
   "name": "webpack-helloworld",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A demo app featuring Webpack, Marionette and PureCSS",
   "author": "Emmanuel Antico",
   "license": "Apache License Version 2.0",
@@ -15,8 +15,8 @@
     "purecss": "^0.5.0",
     "style-loader": "^0.8.1",
     "underscore": "1.6.0",
-    "underscore-template-loader": "^0.2.1",
-    "handlebars-template-loader": "^0.2.0",
+    "underscore-template-loader": "^0.2.3",
+    "handlebars-template-loader": "^0.2.1",
     "url-loader": "^0.5.5"
   }
 }
