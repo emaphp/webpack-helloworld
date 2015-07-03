@@ -1,38 +1,32 @@
-//include styles
-require('purecss/pure-min.css');
-require('purecss/grids-responsive-min.css');
-require('purecss/buttons-min.css');
+// File: app.js
 
-//addtional styles
-require('../css/styles.css');
-
-//font awesome
-require("font-awesome-webpack");
-
-//handlebars helpers
-require('./helpers.js');
-
-//generate application instance
+// Create application instance
 var Marionette = require('marionette');
 var app = new Marionette.Application();
-app.addRegions({mainRegion: '#mainRegion'});
-app.on("start", function() {
-	var controller = require('./controller.js');
-	controller.setRegion(this.mainRegion);
+
+// Configure regions
+app.addRegions({
+	body: 'body'
 });
 
-//initialize
-var $ = require('jquery');
+// Initialize controller on start
+app.on('start', function() {
+	// Initialize layout
+	var Views = require('./views');
+	var layout = new Views.LayoutView()
+	app.getRegion('body').show(layout);
 
-$(document).on('ready', function() {
-	app.start();
-	var controller = require('./controller.js');
-	
-	$('#hello-action').click(function() {
-		controller.displayHelloWorld();
-	});
-	
-	$('#about-action').click(function() {
-		controller.displayAbout();
-	});
+	// Setup controller
+	var Controller = require('./controller');
+	var controller = new Controller(layout.getRegion('mainRegion'));
+
+	// Setup router
+	var Router = require('./router');
+	var router = new Router(controller);
+
+	// Initialize history
+	var Backbone = require('backbone');
+	Backbone.history.start();
 });
+
+module.exports = app;

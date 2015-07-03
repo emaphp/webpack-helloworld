@@ -1,3 +1,5 @@
+// File: helpers.js
+
 var Handlebars = require('handlebars-template-loader').Handlebars;
 
 Handlebars.registerHelper('list', function(items, options) {

@@ -1,22 +1,26 @@
+// File: controller.js
+
 var Marionette = require('marionette');
 var _ = require('underscore');
-var models = require("./models.js");
-var views = require("./views.js");
+var Models = require("./models.js");
+var Views = require("./views.js");
 		
 var Controller = Marionette.Controller.extend({
-	setRegion: function(region) {
+	initialize: function(region) {
 		this.region = region;
 	},
 	
 	displayHelloWorld: function() {
-		//build message
-		var values = ['Hello', 'World'];
-		var greeting = new models.Greeting({message: _.reduce(values, function (v1, v2) {
-			return v1 + ' ' + v2;
-		})});
+		// Build model instance
+		var greeting = new Models.Greeting({
+			message: 'Hello World'
+		});
 		
-		//show message
-		var view = new views.GreetingView({model: greeting});
+		// Build view instance
+		var view = new Views.GreetingView({
+			model: greeting
+		});
+
 		this.region.show(view);
 	},
 	
@@ -29,11 +33,10 @@ var Controller = Marionette.Controller.extend({
 			{name: "FontAwesome", url: "http://fortawesome.github.io/Font-Awesome/"}
 		];
 
-		var about = new models.About({libs: libs});
-		var view = new views.AboutView({model: about});
+		var about = new Models.About({libs: libs});
+		var view = new Views.AboutView({model: about});
 		this.region.show(view);
 	}
 });
 
-var controller = new Controller();
-module.exports = controller;
+module.exports = Controller;

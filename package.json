@@ -1,22 +1,22 @@
 {
   "name": "webpack-helloworld",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "A demo app featuring Webpack, Marionette and PureCSS",
   "author": "Emmanuel Antico",
   "license": "Apache License Version 2.0",
   "dependencies": {
-    "backbone": "1.1.2",
-    "backbone.marionette": "2.2.1",
-    "css-loader": "^0.9.0",
-    "file-loader": "^0.8.1",
-    "font-awesome": "^4.2.0",
-    "font-awesome-webpack": "0.0.2",
-    "jquery": "^2.1.1",
-    "purecss": "^0.5.0",
-    "style-loader": "^0.8.1",
-    "underscore": "1.6.0",
-    "underscore-template-loader": "^0.2.3",
-    "handlebars-template-loader": "^0.2.1",
-    "url-loader": "^0.5.5"
+    "backbone": "^1.2.1",
+    "backbone.marionette": "^2.4.2",
+    "css-loader": "^0.15.1",
+    "file-loader": "^0.8.4",
+    "font-awesome": "4.3.0",
+    "font-awesome-webpack": "0.0.3",
+    "handlebars-template-loader": "^0.3.0",
+    "jquery": "^2.1.4",
+    "purecss": "^0.6.0",
+    "style-loader": "^0.12.3",
+    "underscore": "^1.8.3",
+    "underscore-template-loader": "^0.2.6",
+    "url-loader": "^0.5.6"
   }
 }

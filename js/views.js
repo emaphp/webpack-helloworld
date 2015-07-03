@@ -1,8 +1,32 @@
-//views
+// File: views.js
+
 var Marionette = require('marionette');
 var _ = require('underscore');
 var models = require('./models.js');
 
+// Application layout
+var LayoutView = Marionette.LayoutView.extend({
+    tagName: 'div',
+    className: 'pure-u-1-1',
+    template: require('../templates/layout.html'),
+    
+    regions: {
+        mainRegion: '#main-region',
+        buttonsRegion: '#buttons-region'
+    },
+
+    onBeforeShow: function() {
+        this.getRegion('buttonsRegion').show(new ButtonsView());
+    }
+});
+
+// Action buttons
+var ButtonsView = Marionette.ItemView.extend({
+    className: 'pure-u-1-1',
+    template: require('../templates/buttons.html')
+});
+
+// 'Hello World' template
 var GreetingView = Marionette.ItemView.extend({
 	model: models.Greeting,
 	tagName: 'div',
@@ -11,6 +35,7 @@ var GreetingView = Marionette.ItemView.extend({
 	}
 });
 
+// About template
 var AboutView = Marionette.ItemView.extend({
 	model: models.About,
 	tagName: 'div',
@@ -20,6 +45,7 @@ var AboutView = Marionette.ItemView.extend({
 });
 
 module.exports = {
+	LayoutView: LayoutView,
 	GreetingView: GreetingView,
 	AboutView: AboutView
 };

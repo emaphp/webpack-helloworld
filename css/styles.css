@@ -19,12 +19,12 @@ body {
 	background-attachment: fixed;
 }
 
-#mainRegion {
+#main-region {
 	color: #fefefe;
 	text-align: center;
 }
 
-#mainRegion a {
+#main-region a {
 	color: #fefefe;
 }
 
@@ -39,10 +39,10 @@ h1, small {
 	
 }
 
-#buttons {
+#buttons-region {
 	margin-top: 2em;
 }
 
-.main-action {
+#buttons-region div {
 	text-align: center;
 }
