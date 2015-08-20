@@ -5,7 +5,7 @@
   "author": "Emmanuel Antico",
   "license": "Apache-2.0",
   "dependencies": {
-    "backbone": "^1.2.1",
+    "backbone": "1.2.1",
     "backbone.marionette": "^2.4.2",
     "css-loader": "^0.16.0",
     "file-loader": "^0.8.4",
