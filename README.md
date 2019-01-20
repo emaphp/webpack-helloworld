@@ -1,40 +1,32 @@
 webpack-helloworld
 ===================
 
-A demo app featuring Webpack, Marionette and PureCSS
+##About
+
+A demo app made with Webpack 4, featuring Sass, Babel and Lodash.
 
 
 <br/>
-####Description
+#What's Included?
 
-webpack-helloworld is a demo app that features Marionette, PureCSS and FontAwesome glued together with Webpack. Its main purpose is showing a working configuration of Webpack with some general purpose loaders.
-
-<br/>
-####Dependencies
-
-Make sure to have these applications installed in your system:
-
- * npm
- * webpack
+webpack-helloworld is very unopinionated, letting you extend the application using the framework you want. It does include `lodash` by default to simplify some UI tasks.
 
 <br/>
-####Installation
+##Building
 
-Install required dependencies through npm:
+After installing all dependencies, run the following command:
 
 ```bash
-$ npm install
+npm run dev
 ```
 
-Run webpack (configuration is obtained from *webpack.config.js*):
+For a production build, run:
 
 ```bash
-$ webpack
+npm run prod
 ```
 
-The file *bundle.js* containing all application code is generated. Open *index.html* with a browser to see the results.
-
 <br/>
-####License
+##License
 
 Licensed under the Apache License, Version 2.0.

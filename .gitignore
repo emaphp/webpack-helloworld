@@ -1,5 +1,5 @@
 node_modules/
-bundle.js
+dist/
 *.ttf
 *.eot
 *.woff

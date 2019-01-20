@@ -1,25 +1,63 @@
+/*
+  eslint-disable import/no-extraneous-dependencies
+  eslint-disable arrow-body-style
+  eslint-disable no-unused-vars
+*/
+
+var path = require('path');
+
 module.exports = {
-    entry: "./js/main.js",
-    resolve: {
-        alias: {
-            "marionette": "backbone.marionette"
-        }
-    },
+    entry: "./src/main.js",
     output: {
-        path: __dirname,
-        filename: "bundle.js"
-    },
-    node: {
-        fs: "empty"
+        path: path.resolve(__dirname, "dist"),
+        filename: "bundle.js",
     },
     module: {
-        loaders: [
-            { test: /\.css$/, loader: "style!css" },
-            { test: /\.html/, loader: "underscore-template-loader" },
-            { test: /\.hbs/, loader: "handlebars-template-loader" },
-            { test: /\.woff(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&minetype=application/font-woff" },
-            { test: /\.woff2(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&minetype=application/font-woff" },
-            { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" }
-        ]
-    }
+       rules: [
+            {
+                test: [/.js$/],
+                exclude: [/node_modules/],
+                loader: 'babel-loader'
+            },
+            {
+                test: /\.scss$/,
+                exclude: [/node_modules/],
+                use: [
+                    {
+                        loader: 'style-loader'
+                    },
+                    {
+                        loader: 'css-loader'
+                    },
+                    {
+                        loader: 'sass-loader'
+                    }
+                ]
+            },
+            {
+                test: /\.css$/,
+                exclude: [/node_modules/],
+                use: [
+                    {
+                        loader: 'style-loader'
+                    },
+                    {
+                        loader: 'css-loader'
+                    }
+                ]
+            },
+            {
+                test: /\.woff(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                loader: "url-loader?limit=10000&minetype=application/font-woff"
+            },
+            {
+                test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                loader: "file-loader"
+            }
+        ],
+    },
+    stats: {
+        colors: true,
+    },
+    devtool: 'source-map'
 };

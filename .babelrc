@@ -1,0 +1,13 @@
+{
+    "presets": [
+        [
+            "@babel/preset-env", {
+                debug: true
+            }
+        ]
+    ],
+    "plugins": [
+        "@babel/plugin-proposal-function-bind",
+        "@babel/plugin-transform-runtime"
+    ]
+}
