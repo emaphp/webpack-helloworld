@@ -1,6 +1,6 @@
 {
   "name": "webpack-helloworld",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "scripts": {
     "dev": "webpack --mode=development",
     "prod": "webpack --mode=production"
@@ -11,7 +11,7 @@
   "repository": "https://github.com/emaphp/webpack-helloworld.git",
   "dependencies": {
     "@babel/runtime": "^7.2.0",
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.15"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",
@@ -26,7 +26,7 @@
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "url-loader": "^1.1.2",
-    "webpack": "^4.28.4",
-    "webpack-cli": "^3.2.1"
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9"
   }
 }
